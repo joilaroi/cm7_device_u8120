@@ -1,0 +1,30 @@
+Edit vendor/cyanogen/vendorsetup.sh to add a lunch “combo” for the U8120:
+add_lunch_combo cyanogen_u8120-eng
+
+Add a makefile for the u8120:
+cp vendor/cyanogen/products/cyanogen_u8220.mk vendor/cyanogen/products/cyanogen_u8120.mk
+
+Edit vendor/cyanogen/products/cyanogen_u8120.mk, replacing occurances of “u8220″ with “u8120″ (pay attention to case!).
+Use common sense. Basically, tailor the new makefile to be U8120 specific. 
+Pay specific attention to the paths to makefiles and such, as they need more intelligence than just a search/replace…
+
+Edit vendor/cyanogen/products/AndroidProducts.mk to add the following line:
+$(LOCAL_DIR)/cyanogen_u8120.mk \
+This tells the build system where to find the device’s makefile.
+
+Check out a copy of my u8120 device tree:
+cd device/huawei
+git clone --branch=t_dev git://github.com/tas0s/cm_huawei_u8120_joil.git  (this is for dev branch)
+or 
+git clone --branch=master git://github.com/tas0s/cm_huawei_u8120_joil.git  (this is for main branch)
+
+Copy proprietary files
+either by running extract-files.sh with a device connected in 
+or by running unzip-files.sh with a u8160 stock rom placed in as u8120_update.zip
+
+Set up the build environment:
+. build/envsetup.sh
+brunch u8120
+
+
+Based on alan's orth guide : http://mjanja.co.ke/2011/09/building-cyanogenmod-7-for-the-huawei-u8150/
