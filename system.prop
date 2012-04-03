@@ -1,0 +1,31 @@
+#
+# system.prop for Huawei U8120
+#
+
+# Huawei Gingerbread Config
+DEVICE_PROVISIONED=1
+ro.config.hw_power_saving=true
+ro.config.hw_voicerecord=true
+debug.sf.hw=1
+ro.config.sync=yes
+
+# Camera related
+ro.workaround.noautofocus=1
+ro.config.PicMaxSize=3mp
+
+# Tweaks
+persist.sys.gmaps_hack=1
+
+# MMS & WAP related
+ro.config.ipcall=true
+ro.config.hw_support_ipcall=true
+ro.hw_oom_app=com.android.mms
+ro.config.hw_always_allow_mms=true
+ro.config.hw_gcf_mms=true
+ro.config.mms_rec_localtime=true
+ro.config.mms_ua=Android-Mms/2.0
+ro.config.hw_use_browser_ua=true
+ro.config.hw_uaprof=http://wap1.huawei.com/uaprof/HuaweiU8120v100WCDMANormal.xml
+ro.config.hw_browser_ua3g=http://wap1.huawei.com/uaprof/HuaweiU8120v100WCDMANormal.xml
+ro.config.hw_browser_ua2g=http://wap1.huawei.com/uaprof/HuaweiU8120v100GPRSNormal.xml
+

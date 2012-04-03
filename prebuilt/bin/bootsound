@@ -1,0 +1,6 @@
+#!/system/bin/sh
+	play=`getprop persist.sys.nobootsound`
+	if [ "$play" = "1" ]; then
+        	stagefright -a -o /system/media/poweron.ogg
+	fi
+exit 0

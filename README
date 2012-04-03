@@ -14,9 +14,7 @@ This tells the build system where to find the device’s makefile.
 
 Check out a copy of my u8120 device tree:
 cd device/huawei
-git clone --branch=t_dev git://github.com/tas0s/cm_huawei_u8120_joil.git  (this is for dev branch)
-or 
-git clone --branch=master git://github.com/tas0s/cm_huawei_u8120_joil.git  (this is for main branch)
+git clone git://github.com/joilaroi/cm7_device_u8120.git
 
 Copy proprietary files
 either by running extract-files.sh with a device connected in 
@@ -26,5 +24,3 @@ Set up the build environment:
 . build/envsetup.sh
 brunch u8120
 
-
-Based on alan's orth guide : http://mjanja.co.ke/2011/09/building-cyanogenmod-7-for-the-huawei-u8150/
